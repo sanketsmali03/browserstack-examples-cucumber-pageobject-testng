@@ -29,13 +29,7 @@ public class Bag extends BasePage {
         super(driver);
     }
 
-    public CheckoutPage proceedToCheckout() {
-        wait.until(ExpectedConditions.visibilityOf(bagClosed));
-        waitAndClick(bagButton);
-        wait.until(ExpectedConditions.visibilityOf(bagOpen));
-        wait.until(ExpectedConditions.elementToBeClickable(buyButton)).click();
-        return new CheckoutPage(driver);
-    }
+    
 
     public void close() {
         waitAndClick(closeButton);
